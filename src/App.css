@@ -1,38 +1,54 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .background-1{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  opacity: .8;
+  background: linear-gradient( 45deg ,#00778f , #3e7897 , #36c1ba);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .background-2{
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  z-index: -11;
+  opacity: .35;
+  border-top-left-radius: 83%;
+  background: linear-gradient( 0deg,#649cb0 , #63a0b2 , #639db1)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.error{
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: error .8s 10 linear alternate backwards;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes error {
+  from{
+    color: white;
+  }to{
+    color: rgb(228, 94, 94);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .title{
+  color: white;
+  padding:20px;
 }
+
+/* const myapi = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}' ;
+    const junapi = 'http://api.openweathermap.org/data/2.5/weather?q=cairo%2Cegypt&appid=e36ed364400282e43250b6c4c0274d44' ;
+const mykey = '5d37c4b48cef8e9bae91fa889fd97ea9' ;
+const junkey = 'e36ed364400282e43250b6c4c0274d44' */
+
+

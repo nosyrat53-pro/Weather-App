@@ -1,0 +1,260 @@
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75vh;
+}
+
+@media(max-width: 1050px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media(max-width: 860px){
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+}
+
+.container .tody{
+    width: 32%;
+    height: 97.5%;
+    padding: 0 20px;
+    margin: auto;
+    color: white;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.3);
+}
+
+@media(max-width: 860px ){
+        
+    .container .tody{
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        position: relative;
+    }
+
+    .container .tody *{
+        display: inline-block;
+    }
+
+    .container .tody .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%!important;
+        padding-top: 0!important;
+        border-right: 1px solid white;
+        border-bottom: none!important;
+    }
+
+    .container .tody .icon svg{
+        font-size: 160px;
+    }
+
+    .container .tody .date{
+        position: absolute;
+        top: 0;
+        left: 40%;
+        width: 35%;
+        height: 100%;
+        border-right: 1px solid white;
+        border-bottom: none!important;
+        text-align: center!important;
+        line-height: 6rem;
+    }
+
+    .container .tody .date h1{
+        display: block;
+    }
+
+    .container .tody .weather-info{
+        position: absolute;
+        top: 0;
+        left: 75%;
+        height: 100%;
+        line-height: 4rem;
+        text-align: center!important;
+    }
+
+    .container .tody .weather-info div{
+        display: block;
+    }
+}
+
+.container .tody .icon{
+    height: 57%;
+    padding-top: 5%;
+    border-bottom: 1px solid white;
+}
+
+@media(max-width: 600px){
+    .container .tody .icon{
+        width: 35%;
+    }
+
+    .container .tody .date{
+        left: 70%;
+        width: 30%;
+        border-right: none;
+        line-height: 2rem;
+        top: 5%;
+        transform-origin: center;
+        transform: rotate(-90deg);
+        left: 81%;
+    }
+
+    .container .tody .weather-info {
+        left: 34%;
+        width: 35%;
+        border-right: 1px solid white;
+    }
+    .container .tody .weather-info div{
+        display: block;
+    }
+
+
+}
+
+@media(max-width: 500px){
+    .container .tody .icon svg{
+        font-size: 120px;
+    }
+
+    .container .tody .icon .desc{
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    .container .tody .weather-info {
+        font-size: .7rem;
+    }
+
+    .container .tody .weather-info div{
+        display: block;
+    }
+
+    .container .tody .date {
+        font-size: .65rem!important;
+        top: 8%;
+        left: 86%;
+    }
+}
+
+@media(max-width: 450px){
+    .container .tody .icon{
+        border-right: none!important;
+    }
+    .container .tody .weather-info{
+        font-size: .75rem!important;
+    }
+
+    .container .tody .date {
+        font-size: .7rem!important;
+        top: 12%;
+        left: 90%;
+    }
+}
+
+.container .tody .icon .desc{
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.container .tody svg{
+    font-size: 200px;
+}
+
+
+.container .tody .date{
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.container .tody .weather-info {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+@media(max-width: 775px){
+    .container .tody .weather-info {
+        font-size: 1rem;
+    }       
+}
+
+@media(max-width: 710px){
+    .container .tody .date {
+        font-size: .8rem;
+    }
+}
+
+.container .other-days{
+    width: 68%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center
+}
+
+@media(max-width: 860px){
+    .container .other-days {
+        width: 100%;
+        height: 420px;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 500px){
+    .container .other-days{
+        height: auto;
+    }
+    .container .other-days .day{
+        width: 80%!important;
+        height: 200px!important;
+        margin: 5px auto!important;
+    }
+}
+
+.container .other-days .day{
+    width: 46%;
+    height: 47%;
+    background: rgba(255,255,255,.3);
+    padding: 0 10px ;
+    color: rgba(255, 255, 255, 0.938);
+    text-transform: uppercase;
+}
+
+.container .other-days .day .icon {
+    border-bottom: 1px solid white;
+    padding-top: 5px;
+}
+
+.container .other-days .day .icon svg{
+    font-size: 65px;
+    color: white;
+}
+.container .other-days .day .name{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.container .other-days .day .degree{
+    font-weight: 700;
+}
+
+.container .other-days .day .degree .temp{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
